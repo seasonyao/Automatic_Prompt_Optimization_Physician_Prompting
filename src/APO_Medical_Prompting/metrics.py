@@ -65,7 +65,7 @@ class Rouge(Rouge):
 
             count += 1
         
-        count += 1e-10 #added by ahmed to avoid divide by 0 error in line 70 below
+        count += 1e-10
         avg_scores = {
             m: {s: scores[m][s] / count for s in self.stats}
             for m in self.metrics

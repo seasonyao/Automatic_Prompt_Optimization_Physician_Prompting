@@ -1,5 +1,5 @@
 # Automatic Prompt Optimization for Medical Note Generation
-![My Image](flowchart_new.png "Image Title")
+![My Image](imgs/flowchart_new.png "Image Title")
 
 ## Introduction
 In the world LLMs, the prompt can make or break the result. 
@@ -20,6 +20,20 @@ Automatic Prompt Optimization (APO) [(Pryzant et al., 2023)](https://arxiv.org/p
  Please see our paper for further details: https://arxiv.org/pdf/2311.09684.pdf
 
 ## How to Run
+The code outside the `APO_Medical_Prompting` directory is the code that was utilized to run experiments prior to our main methodology. 
+To run APO for medical prompts, you must do the following:
+
+1. Go to the file at `src/APO_Medical_Prompting/APO_Medical_Prompting.ipynb`.
+2. Input your OpenAI API key in cell 3.
+3. The default data is loaded in cell 4. If you would like to load different data, load the files in `src/APO_Medical_Prompting/data` and make sure they have the same column names and types of data as the current CSV files.
+4. Uncomment the line of code for the particular SOAP section you would like to generate a prompt for in cell 5. Make sure only one section is uncommented during a run.
+5. In the last cell, you can change the `train_loop()` function arguments such as `EPOCH`, `steps_per_epoch`, `bsz` (batch size), etc.
+6. Run all the cells. This will take time, depending on factors such as the parameters from step 5. The final prompt should be in the output below the last cell.
+
+This has been tested on Python 3.11 but will probably work on other versions.
+ 
+## Contact
+For inquiries, please contact Ahmed at ajaafar@umass.edu or open an issue.
 
 ## Citation
 ```
